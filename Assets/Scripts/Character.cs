@@ -10,9 +10,10 @@ public class Character : MonoBehaviour
     public int Attack { get; private set; }
     public int Shield { get; private set; }
     public int Critical { get; private set; }
+    public string Job { get; private set; }
+    public string JobExplain { get; private set; }
 
-
-    public Character(string name, int level, int hp, int attack, int shield, int critical)
+    public Character(string name, int level, int hp, int attack, int shield, int critical, string job, string jobExplain)
     {
         Name = name;
         Level = level;
@@ -20,5 +21,7 @@ public class Character : MonoBehaviour
         Attack = attack;
         Shield = shield;
         Critical = critical;
+        Job = job;
+        JobExplain = jobExplain;
     }
 }

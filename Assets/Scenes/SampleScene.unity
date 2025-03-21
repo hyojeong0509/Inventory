@@ -1063,8 +1063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26bc37a54c9c1dd4f8bd848e93d38896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 871054770}
-  levelText: {fileID: 1435955131}
   hpText: {fileID: 214431024}
   attackText: {fileID: 1480682199}
   shieldText: {fileID: 1948618098}
@@ -2134,6 +2132,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusButton: {fileID: 1077484912}
   inventoryButton: {fileID: 1214915271}
+  classText: {fileID: 1015766619}
+  classexplainText: {fileID: 1165077445}
+  coinText: {fileID: 1361698461}
+  nameText: {fileID: 871054770}
+  levelText: {fileID: 1435955131}
 --- !u!1 &682278186
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,6 +4082,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221374577}
   m_CullTransparentMesh: 1
+--- !u!1 &1225495088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225495090}
+  - component: {fileID: 1225495089}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1225495089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225495088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60a086a9fad6b646b7f33aaacd4b2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1225495090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225495088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 556.4677, y: 543.4898, z: 4.58423}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227726320
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,7 +4460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10000
+  m_text: 0000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 374216c0ae4abc74c8296261759de5b8, type: 2}
   m_sharedMaterial: {fileID: -7893876790062143051, guid: 374216c0ae4abc74c8296261759de5b8, type: 2}
@@ -5907,9 +5954,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 884753703}
+  - {fileID: 145437278}
   - {fileID: 603647443}
   - {fileID: 100611597}
   - {fileID: 682278190}
-  - {fileID: 145437278}
   - {fileID: 2278230}
   - {fileID: 1000839134}
+  - {fileID: 1225495090}

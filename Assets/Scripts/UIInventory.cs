@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
-    [SerializeField] private Button returnButton; // 뒤로가기 버튼 추가
+    [SerializeField] private Button returnButton;
 
     private void Start()
     {

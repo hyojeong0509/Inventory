@@ -1,11 +1,11 @@
 using UnityEngine;
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance { get; private set; }
+   public static UIManager Instance { get; private set; }
 
     [SerializeField] private UIMainMenu uiMainMenu;
     [SerializeField] private UIStatus uiStatus;
-    [SerializeField] private UIInventory uiInventory;
+    [SerializeField] private UIInventory uiInventory; 
 
     public UIMainMenu MainMenu => uiMainMenu;
     public UIStatus Status => uiStatus;
