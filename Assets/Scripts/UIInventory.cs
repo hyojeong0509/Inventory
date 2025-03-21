@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button returnButton; // 뒤로가기 버튼 추가
+
+    private void Start()
     {
-        
+        returnButton.onClick.AddListener(CloseInventory);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CloseInventory()
     {
-        
+        gameObject.SetActive(false);
+        UIManager.Instance.MainMenu.OpenMainMenu();
     }
 }
