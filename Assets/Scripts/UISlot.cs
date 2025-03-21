@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class UISlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Image iconImage;
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI descriptionText;
+
+    private Item item;
+
+    public void SetItem(Item newItem)
     {
-        
+        item = newItem;
+        RefreshUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void RefreshUI()
     {
-        
+        if (item != null)
+        {
+            iconImage.sprite = item.Icon;
+            nameText.text = item.Name;
+            descriptionText.text = item.Description;
+        }
     }
 }

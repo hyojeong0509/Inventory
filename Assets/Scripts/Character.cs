@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     public int Critical { get; private set; }
     public string Job { get; private set; }
     public string JobExplain { get; private set; }
+    public List<Item> Inventory { get; private set; } = new List<Item>();
 
     public Character(string name, int level, int hp, int attack, int shield, int critical, string job, string jobExplain)
     {
