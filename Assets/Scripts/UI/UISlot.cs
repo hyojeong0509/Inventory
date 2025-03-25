@@ -46,6 +46,16 @@ public class UISlot : MonoBehaviour
         nameText.text = item.Name;
         descriptionText.text = item.Description;
 
-        equipStateText.text = item.IsEquipped ? "E" : "";
+        if (!item.CanEquip)
+        {
+            equipStateText.text = "[¼Ò¸ðÇ°]";
+            equipStateText.color = Color.blue;
+        }
+        else
+        {
+            equipStateText.text = item.IsEquipped ? "E" : "";
+            equipStateText.color = Color.red;
+        }
+        
     }
 }

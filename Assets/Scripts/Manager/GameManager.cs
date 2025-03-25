@@ -13,12 +13,11 @@ public class GameManager : MonoBehaviour
     {
         Player = new Character("효정", 2, 100, 10, 10, 15, "여전사", "검을 들고 싸우는 여전사입니다.");
 
-        Sprite coinSprite = Resources.Load<Sprite>("Coin");
-        Sprite raySprite = Resources.Load<Sprite>("Ray");
-        Sprite starSprite = Resources.Load<Sprite>("Star");
+        Sprite swordSprite = Resources.Load<Sprite>("Sword");
+        Sprite potionSprite = Resources.Load<Sprite>("Potion");
         
-        var sword = new Item("단검", "짧고 빠른 무기", coinSprite, 5);
-        var potion = new Item("HP 포션", "HP를 50 회복합니다", raySprite, 0);
+        var sword = new Item("단검", "짧고 빠른 무기", swordSprite, 5, true);
+        var potion = new Item("HP 포션", "HP를 50 회복합니다", potionSprite, 0, false);
 
         Player.AddItem(sword);
         Player.AddItem(potion);
