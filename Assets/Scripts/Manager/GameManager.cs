@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
         Sprite raySprite = Resources.Load<Sprite>("Ray");
         Sprite starSprite = Resources.Load<Sprite>("Star");
 
-        Player.Inventory.Add(new Item("코인", "테스트용 코인 아이콘", coinSprite));
-        Player.Inventory.Add(new Item("번개", "테스트용 번개 아이콘", raySprite));
-        Player.Inventory.Add(new Item("별", "테스트용 별 아이콘", starSprite));
+        Player.Inventory.Add(new Item("코인", "코인입니다", coinSprite));
+        Player.Inventory.Add(new Item("번개", "번개입니다", raySprite));
+        Player.Inventory.Add(new Item("별", "별입니다", starSprite));
 
         UIManager.Instance.MainMenu.SetCharacterInfo(Player);
         UIManager.Instance.Status.SetCharacterInfo(Player);

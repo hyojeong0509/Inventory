@@ -7,7 +7,7 @@ public class UIInventory : MonoBehaviour
 {
     [SerializeField] private Button returnButton;
 
-    [SerializeField] private Transform slotParent; // 슬롯이 붙을 부모 (스크롤 뷰 Content)
+    [SerializeField] private Transform slotParent;
     [SerializeField] private GameObject slotPrefab; 
 
     private void Start()
