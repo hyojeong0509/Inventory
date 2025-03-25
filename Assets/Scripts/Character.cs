@@ -25,4 +25,19 @@ public class Character : MonoBehaviour
         Job = job;
         JobExplain = jobExplain;
     }
+    public void AddItem(Item item)
+    {
+        Inventory.Add(item);
+    }
+
+    public void EquipItem(Item item)
+    {
+        item.Equip();
+    }
+
+    public void UnEquipItem(Item item)
+    {
+        item.UnEquip();
+    }
+
 }

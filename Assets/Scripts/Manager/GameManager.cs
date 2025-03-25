@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
         Sprite coinSprite = Resources.Load<Sprite>("Coin");
         Sprite raySprite = Resources.Load<Sprite>("Ray");
         Sprite starSprite = Resources.Load<Sprite>("Star");
+        
+        var sword = new Item("단검", "짧고 빠른 무기", coinSprite, 5);
+        var potion = new Item("HP 포션", "HP를 50 회복합니다", raySprite, 0);
 
-        Player.Inventory.Add(new Item("코인", "코인입니다", coinSprite));
-        Player.Inventory.Add(new Item("번개", "번개입니다", raySprite));
-        Player.Inventory.Add(new Item("별", "별입니다", starSprite));
+        Player.AddItem(sword);
+        Player.AddItem(potion);
 
         UIManager.Instance.MainMenu.SetCharacterInfo(Player);
         UIManager.Instance.Status.SetCharacterInfo(Player);
