@@ -25,6 +25,8 @@ public class UISlot : MonoBehaviour
         item.ToggleEquip();
         Debug.Log($"ÀåÂø »óÅÂ º¯°æµÊ ¡æ {item.IsEquipped}");
         RefreshUI();
+
+        UIManager.Instance.Status.RefreshUI();
     }
     private void RefreshUI()
     {

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class UIStatus : MonoBehaviour
@@ -10,7 +11,9 @@ public class UIStatus : MonoBehaviour
     [SerializeField] private TextMeshProUGUI criticalText;
 
     [SerializeField] private Button returnButton;
-    private void Start() 
+
+    private Character character;
+    private void Start()
     {
         returnButton.onClick.AddListener(CloseStatus);
     }
@@ -18,11 +21,17 @@ public class UIStatus : MonoBehaviour
     {
         Debug.Log("Status 캐릭터 정보 세팅됨!");
 
+        this.character = character;
+        RefreshUI();
+    }
+    public void RefreshUI()
+    {
         hpText.text = $"{character.HP}";
-        attackText.text = $"{character.Attack}";
+        attackText.text = $"{character.GetTotalAttack()}";
         shieldText.text = $"{character.Shield}";
         criticalText.text = $"{character.Critical}";
     }
+
     public void CloseStatus()
     {
         gameObject.SetActive(false);

@@ -39,5 +39,14 @@ public class Character : MonoBehaviour
     {
         item.UnEquip();
     }
-
+    public int GetTotalAttack()
+    { 
+        int total = 10; //기본 공격력 10
+        foreach (var item in Inventory)
+        {
+            if (item.IsEquipped)
+                total += item.Attack;
+        }
+        return total;
+    }
 }
